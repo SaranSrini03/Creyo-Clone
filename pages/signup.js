@@ -22,7 +22,7 @@ export default function Signup() {
     }
 
     try {
-      await signupUser(firstName, las, email, password, country);
+      await signupUser(firstName, lastName, email, password, country);
       router.push("/login");
     } catch (error) {
       setError("Signup failed. Please try again.");
@@ -33,10 +33,15 @@ export default function Signup() {
     <div className="flex h-screen bg-gray-200">
       {/* Left Section - Video Background (Visible on mobile and desktop) */}
       <div className="relative hidden lg:block w-1/2 h-full">
-        <img
-          src="/images/signup.gif"
-          alt="signup gif"
-          className="absolute inset-0 w-full h-full object-cover"
+      <video
+          src="/images/signup.mp4"
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover absolute top-0 left-0 z-0"
+          type="video/mp4"
+          disablePictureInPicture
+          style={{ pointerEvents: "none" }}
         />
       </div>
 
