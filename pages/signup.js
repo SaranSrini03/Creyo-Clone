@@ -35,7 +35,7 @@ export default function Signup() {
       <div className="relative hidden lg:block w-1/2 h-full">
         <img
           src="/images/signup.gif"
-          alt="Trending GIF"
+          alt="signup gif"
           className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
