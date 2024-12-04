@@ -23,6 +23,7 @@ export default function Signup() {
 
     try {
       await signupUser(firstName, lastName, email, password, country);
+
       router.push("/login");
     } catch (error) {
       setError("Signup failed. Please try again.");
@@ -51,7 +52,7 @@ export default function Signup() {
         <div className="w-full max-w-md p-8 bg-white bg-opacity-10 rounded-lg shadow-sm backdrop-blur-md">
           <h2 className="text-center text-xl font-semibold mb-6">Welcome to Creyo</h2>
           {error && <p className="text-red-500 mb-4">{error}</p>}
-          <form onSubmit={handleSubmit}>
+          <form >
             <div className="mb-4">
               <label htmlFor="firstName" className="block mb-2">
                 First Name:
@@ -140,8 +141,10 @@ export default function Signup() {
             </div>
 
             <button
-              type="submit"
+              
+              type="button"
               className="w-full p-3 bg-black text-white rounded-md hover:bg-gray-800 transition font-medium"
+              onClick={handleSubmit}
             >
               Sign Up
             </button>
